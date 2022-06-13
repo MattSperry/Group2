@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Description: My first node app. Displays a song list that can be edited, added to, and cleared
+Authors: Matthew Sperry, Eva Wu, Emma Plessinger, Garrett Sackley, Hannah Thomas -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita&display=swap"
+      rel="stylesheet"
+    />
+    <!--Linking the styles sheet-->
+    <link rel="stylesheet" href="/Styles/Styles.css" />
+    <title>Add Songs</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Custom Party Playlist</h1>
+    </div>
+
+    <main>
+      <h2>Add Song:</h2>
+        <!--form to add a song to the list-->
+      <form method="post" action="/addsong">
+        Song Name: <input type="text" name="SongName" /><br />
+        Artist Name: <input type="text" name="ArtistID" /><br />
+        Year Released: <input type="text" name="YearReleased" /><br />
+        <button type="submit">Add Song</button>
+      </form>
+    </main>
+  </body>
+</html>

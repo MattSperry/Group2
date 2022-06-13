@@ -1,0 +1,96 @@
+/* Description: My first node app. Displays a song list that can be edited, added to, and cleared
+Authors: Matthew Sperry, Eva Wu, Emma Plessinger, Garrett Sackley, Hannah Thomas */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fdfaec;
+  color: #020a12;
+  margin: 0;
+  overflow: hidden;
+}
+
+main {
+  max-width: 500px;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+/* Fonts and Colors*/
+h1 {
+  color: #fdfaec;
+  font-family: "Sansita", sans-serif;
+}
+
+h2,
+h3 {
+  font-family: "Sansita", sans-serif;
+  color: #020a12;
+  padding-bottom: 1rem;
+}
+
+/* Table Styles */
+th {
+  background-color: #ee964b;
+  color: #fdfaec;
+}
+
+th,
+td {
+  border-bottom: 2px solid #ee964b;
+}
+
+/* Buttons */
+button {
+  background-color: #f4d35e;
+  border: none;
+  color: #fdfaec;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button {
+  background-color: #fdfaec;
+  color: black;
+  border: 2px solid #f4d35e;
+}
+
+button:hover {
+  background-color: #f4d35e;
+  color: #fdfaec;
+}
+
+/* Header */
+.header {
+  margin-top: 0;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  /* background: #048ba8; */
+  color: #fdfaec;
+  font-size: 30px;
+
+  background: hsla(191, 95%, 34%, 1);
+  background: linear-gradient(
+    180deg,
+    hsla(191, 95%, 34%, 1) 33%,
+    hsla(191, 95%, 76%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    hsla(191, 95%, 34%, 1) 33%,
+    hsla(191, 95%, 76%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    hsla(191, 95%, 34%, 1) 33%,
+    hsla(191, 95%, 76%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#048BA8", endColorstr="#88E7FC", GradientType=1 );
+}

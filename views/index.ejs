@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Description: My first node app. Displays a song list that can be edited, added to, and cleared
+Authors: Matthew Sperry, Eva Wu, Emma Plessinger, Garrett Sackley, Hannah Thomas -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sansita&display=swap" rel="stylesheet">
+      <!--Linking the styles sheet-->
+    <link rel="stylesheet" href="/Styles/Styles.css">
+    <title>Display</title>
+
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Custom Party Playlist</h1>
+     </div>
+
+     <main>
+      <h2>Current Playlist:</h2>
+    
+
+    <br />
+    <form method="get" action="/addsong/">
+    <button>New Record</button>
+  </form>
+  <form method="get" action="/startover/">
+    <button>Start Over</button>
+  </form>
+    <!--table to display the songs-->
+    <table>
+      <thead>
+        <tr>
+          <th>Delete</th>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Year</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let iCount = 0; iCount < aSongs.length; iCount++) { %>
+        <tr>
+          <td>
+            <form method="get" action="/delete/<%= aSongs[iCount].SongID; %>">
+              <button type="submit">Delete</button></td>
+            </form>
+          <td style="padding-left: 40px"><%= aSongs[iCount].SongName %></td>
+          <td style="padding-left: 40px"><%= aSongs[iCount].ArtistID %></td>
+          <td style="padding-left: 40px"><%= aSongs[iCount].YearReleased %></td>
+          <td>
+          <form method="get" action="/editsong/<%= aSongs[iCount].SongID; %>">
+            <button type="submit">Edit</button></td>
+          </form>
+        
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </main>
+
+  
+  </body>
+</html>
